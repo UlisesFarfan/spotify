@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '@shared/shared.module';
 import * as dataRow from '../../../../data/tracks.json'
 import { TrackModel } from '@core/models/tracks.model';
 

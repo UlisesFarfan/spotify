@@ -13,7 +13,11 @@ export class CardPlayerComponent {
     album: '',
     cover: '',
     url: '',
-    _id: ''
+    _id: '',
+    duration: {
+      start: 0,
+      end: 0
+    }
   };
   @Input() mode: "small" | "big" = "big"
   

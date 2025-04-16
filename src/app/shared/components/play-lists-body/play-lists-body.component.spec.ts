@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthPageComponent } from './auth-page.component';
+import { PlayListsBodyComponent } from './play-lists-body.component';
 
-describe('AuthPageComponent', () => {
-  let component: AuthPageComponent;
-  let fixture: ComponentFixture<AuthPageComponent>;
+describe('PlayListsBodyComponent', () => {
+  let component: PlayListsBodyComponent;
+  let fixture: ComponentFixture<PlayListsBodyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthPageComponent]
+      imports: [PlayListsBodyComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AuthPageComponent);
+    fixture = TestBed.createComponent(PlayListsBodyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
