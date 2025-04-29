@@ -1,6 +1,7 @@
 import { TrackModel } from './../../core/models/tracks.model';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Observer, Subject } from 'rxjs';
+import { environment } from '../../../enviroments/environment';
 
 
 @Injectable({
@@ -8,6 +9,7 @@ import { BehaviorSubject, Observable, Observer, Subject } from 'rxjs';
 })
 export class MultimediaService {
   callback: EventEmitter<any> = new EventEmitter<any>()
+  private readonly URL = environment.api_track
 
   public trackInfo$: BehaviorSubject<any> = new BehaviorSubject(undefined)
   public audio!: HTMLAudioElement //TODO <audio>
@@ -99,7 +101,7 @@ export class MultimediaService {
 
   public setAudio(track: TrackModel): void {
     console.log('🐱‍🏍🐱‍🏍🐱‍🏍🐱‍🏍🐱‍🏍', track);
-    this.audio.src = track.url
+    this.audio.src = this.URL + track.url.slice(1)
     this.audio.play()
   }
 

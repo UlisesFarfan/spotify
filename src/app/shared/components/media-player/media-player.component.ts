@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
 import { MultimediaService } from '@shared/services/multimedia.service';
+import { Console } from 'console';
 import { Subscription } from 'rxjs'; 
 
 @Component({
@@ -18,7 +19,9 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
     const observer1$ = this.multimediaService.playerStatus$
-      .subscribe(status => this.state = status)
+      .subscribe(status => {
+        this.state = status
+      })
     this.listObservers$ = [observer1$]
   }
 
